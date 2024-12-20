@@ -5,10 +5,10 @@ const fs = require("fs");
 const { promisify } = require("util");
 const readFile = promisify(fs.readFile);
 const { Configuration, OpenAIApi } = require("openai");
+const serverless = require('serverless-http');
 
 const GPT_MODE = process.env.GPT_MODE;
 const HISTORY_LENGTH = process.env.HISTORY_LENGTH || 100;
-const PORT = process.env.PORT || 3000;
 
 let file_context = "You are a helpful Youtube Chatbot.";
 
@@ -141,4 +141,4 @@ app.get("/gpt/:text", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || 3000);
+module.exports.handler = serverless(app);

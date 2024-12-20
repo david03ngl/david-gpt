@@ -2,7 +2,7 @@
   "name": "starter-express-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "functions/index.js",
   "scripts": {
     "start": "node functions/index.js"
   },

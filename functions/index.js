@@ -17,7 +17,6 @@ const messages = [{ role: "system", content: "You are a helpful Youtube Chatbot.
 console.log("GPT_MODE is " + GPT_MODE);
 console.log("History length is " + HISTORY_LENGTH);
 console.log("OpenAI API Key:" + process.env.OPENAI_API_KEY);
-console.log("Port:" + PORT);
 
 app.use(express.json({ extended: true, limit: "1mb" }));
 
